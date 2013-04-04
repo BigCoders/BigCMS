@@ -1,0 +1,22 @@
+body{margin:0;padding:0;font-family:Helvetica,Geneva,Arial,SunSans-Regular,sans-serif;}
+ul{margin:0;padding:0;}
+li{list-style:none;}
+
+#header{width:960px;height:178px;margin:auto;margin-bottom:40px;position:relative;clear:both;}
+#header > img:first-child{margin-top:21px;}
+#header > img.contact{position:absolute;left:396px;top:35px;}
+#header > div#cart{position:absolute;right:10px;top:30px;border:1px solid #d4c182;width:116px;height:86px;}
+#header > div#menu{color:white;height:39px;line-height:39px;margin-top:21px;}
+#header > div#menu > span{float:left;height:39px;line-height:39px;background:URL(../images/header/header_menu_bg.png) center no-repeat;}
+#header > div#menu > span.left{background:URL(../images/header/header_menu_bg.png) left no-repeat;}
+#header > div#menu > span.left > img{height:39px;width:10px;}
+
+#body{width:960px;margin:auto;position:relative;clear:both;}
+#body > ul.sidebar{position:absolute;width:220px;}
+#body > ul.sidebar > li{color:#707070;border-left:1px solid #d3d3d3;padding-left:19px;border-right:1px solid #d3d3d3;}
+#body > ul.sidebar > li.header{border:0;color:white;height:23px;line-height:23px;background:URL(../images/side/side_header.png) left no-repeat;}
+#body > ul.sidebar > li.header > span{float:right;display:block;width:6px;height:100%;background:URL(../images/side/side_header.png) right no-repeat;}
+#body > ul.sidebar > li.bold{margin:14px 0 10px 0;color:black;font-weight:bold;}
+#body > ul.sidebar > li > span{padding-left:20px;background:URL(../images/liStyle.png) 8px center no-repeat;}
+#body > div#content{margin-left:230px;background:red;}
+
