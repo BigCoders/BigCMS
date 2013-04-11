@@ -92,14 +92,14 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<title>BlueCommerce Admin</title>
+	<title>BigCMS Admin</title>
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="screen" href="g/css/assis.css"/>
 	<script type='text/javascript'>
 		var VAR_clientURL = '<?php echo $GLOBALS['clientURL']; ?>';
 		var VAR_baseURL = '<?php echo $GLOBALS['baseURL_currentASSIS']; ?>';
 		var VAR_langCode = '<?php echo $GLOBALS['LANGCODE']; ?>';
-		var VAR_allowedLangs = <?php echo json_encode($GLOBALS['blueCommerce']['langAllowed']);?>;
+		var VAR_allowedLangs = <?php echo json_encode($GLOBALS['bigCMS']['langAllowed']);?>;
 		var API_product = VAR_clientURL+'g/PHP/API_product.php';
 		<?php foreach($GLOBALS['ARRAYS'] as $k=>$v){echo common_array_toJS($k);} ?>
 	</script>
@@ -107,7 +107,7 @@
 	<script src='g/js/assis.js' type='text/javascript'></script>
 </head>
 <body>
-	<div class='aHeader'><h1>BlueCommerce Admin</h1></div>
+	<div class='aHeader'><h1>BigCMS Admin</h1></div>
 	<div class='aMenu'>
 		<a <?php echo ($_GET['command'] == 'dashboard') ? 'class=\'selected\'' : ''; ?> href='<?php echo $GLOBALS['baseURL_ASSIS']; ?>'><span>Dashboard</span></a>
 		<a <?php echo ($_GET['command'] == 'products_manage') ? 'class=\'selected\'' : ''; ?> href='<?php echo $GLOBALS['baseURL_ASSIS']; ?>products_manage/'><span>Productos</span></a>
@@ -126,7 +126,7 @@
 			</li>
 <?php if($HTMLside === true){ ?>
 			<h3>Hola, <?php echo $GLOBALS['userLogged']['userName']; ?></h3>
-			<p>Bienvenido al panel de control de BlueCommerce</p>
+			<p>Bienvenido al panel de control de BigCMS</p>
 			<h3>Asistentes</h3>
 			<?php echo N,$code,T,T; ?>
 <?php } ?>
