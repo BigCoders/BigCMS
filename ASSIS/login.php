@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<title>BlueCommerce Login</title>
+	<title>BigCMS Login</title>
 </head>
 <body>
 	<form action='' method='POST'>
