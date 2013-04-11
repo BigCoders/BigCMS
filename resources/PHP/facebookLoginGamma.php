@@ -9,8 +9,8 @@
 	$GLOBALS['currentURL'] = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 
 	common_setClient($GLOBALS['CLIENT']);
-	/* Estos datos son de las aplicaciones locales de facebook de Marcos, así que NO HACER GILIPOLLECES CON ellas :-) */
-	if($_SERVER['HTTP_HOST'] == 'localhost'){$GLOBALS['blueCommerce']['facebookApp'] = array('appId'=>'144719738902056','secret'=>'d6d0df1d4ff6ce3ec8731e3e33170124','cookie'=>true);}
+	/* Rellenar los datos appId y secret correspondientes */
+	if($_SERVER['HTTP_HOST'] == 'localhost'){$GLOBALS['blueCommerce']['facebookApp'] = array('appId'=>$profile['id'],'secret'=>'','cookie'=>true);}
 	if(!isset($GLOBALS['blueCommerce']['facebookApp'])){return false;}
 
 	/* debemos guardar la anterior URL para volver al sition mediante el cuál se hizo login, aunque solo en caso
@@ -55,13 +55,7 @@
 			$r = users_update($user['id'],array('userFacebookID'=>$profile['id'],'userIP'=>$_SERVER['REMOTE_ADDR'],'userLastLogin'=>date('Y-m-d H:i:s')),false,true);
 			if(isset($r['errorDescription'])){echo 'There was an error.';exit;}
 			$user = $r;
-			/*if(file_exists('API_mails.php') && file_exists('../db/MAILS/templates/ES_facebook_activation_to_client.txt')){
-				include_once('API_mails.php');
-				$destName = array($user['userName']);
-				$subject = 'Confirmación de tu alta en pidemesa';
-				$destMails = array($user['userMail']);
-				$r = mails_sendMail($destMails,$destName,$subject,'TEMPLATE:ES_facebook_activation_to_client',$user);
-			}*/
+			
 		}else{
 			/* Actualizar el anterior usuario */
 			$r = users_update($user['id'],array('userFacebookID'=>$profile['id'],'userIP'=>$_SERVER['REMOTE_ADDR'],'userLastLogin'=>date('Y-m-d H:i:s')),false,true);
