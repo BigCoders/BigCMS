@@ -8,7 +8,7 @@ define('T',"\t");
 define('N',"\n");
 
 /* Si entra por ip, las condiciones cambian */
-if($_SERVER['SERVER_NAME'] == $_SERVER['HTTP_HOST'] && isset($_GET['params']) && substr($_GET['params'],0,13) == 'blueCommerce/'){$_GET['params'] = substr($_GET['params'],13);}
+if($_SERVER['SERVER_NAME'] == $_SERVER['HTTP_HOST'] && isset($_GET['params']) && substr($_GET['params'],0,13) == 'BigCMS/'){$_GET['params'] = substr($_GET['params'],13);}
 
 //FIXME: esto luego
 $GLOBALS['currentURL'] = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
